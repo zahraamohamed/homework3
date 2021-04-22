@@ -6,15 +6,146 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-android:background=""
+android:background="@drawable/my_background"
     >
-    <TextView
+<!--    tool bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Chat"
-        android:textSize="30sp"
-        android:padding="20dp"
-        android:background="@color/white"/>
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_chat"
+            android:textSize="@dimen/text_title_size"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
 
+
+<!--//first sub linear layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_top">
+        <!--message send1-->
+        <LinearLayout
+            style="@style/linear_layout"
+            android:background="@drawable/my_message_send">
+
+            <TextView
+                style="@style/message_style.send"
+                android:text="@string/text_message1" />
+
+            <ImageView style="@style/icon_tick"
+                />
+
+        </LinearLayout>
+                    <!--end message 1-->
+<!--        time-->
+        <TextView
+          style="@style/time"
+            android:text="@string/_22_30"
+            android:layout_gravity="end"
+        />
+
+                    <!-- message send2 -->
+        <!--end message 2-->
+        <!--        time-->
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:background="@drawable/my_message_send">
+
+            <TextView
+                style="@style/message_style.send"
+                android:text="@string/text_message2" />
+
+            <ImageView style="@style/icon_tick" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/time"
+            android:text="@string/_22_31"
+            android:layout_gravity="end"
+            />
+        <LinearLayout
+            style="@style/linear_layout"
+            android:layout_marginEnd="@dimen/margin_start_message"
+            android:layout_marginStart="@dimen/margin_end_message"
+            android:background="@drawable/my_message_recrive"
+           >
+                    <!--receive message 1-->
+            <TextView
+                style="@style/message_style.receive"
+                android:text="@string/text_message_receive1"
+                />
+
+        </LinearLayout>
+                     <!--end message receive 1-->
+        <!--  time-->
+        <TextView
+            style="@style/time"
+            android:text="@string/_22_32"
+            android:layout_gravity="start"
+            />
+        <LinearLayout
+            style="@style/linear_layout"
+            android:background="@drawable/my_message_send">
+
+            <TextView
+                style="@style/message_style.send"
+                android:text="@string/text_message_send3"
+                />
+            <ImageView style="@style/icon_tick" />
+
+        </LinearLayout>
+        <!--end message 1-->
+        <!--        time-->
+        <TextView
+            style="@style/time"
+            android:text="@string/_22_33"
+            android:layout_gravity="end"
+            />
+          <!-- textbox -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/margin_top"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding">
+
+            <ImageView
+                style="@style/icons_all"
+
+                android:src="@drawable/ic_baseline_insert_emoticon_24" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="3"/>
+
+            <ImageView
+              style="@style/icons_all"
+
+                android:src="@drawable/ic_baseline_link_24" />
+
+            <ImageView
+                style="@style/icons_all"
+
+                android:src="@drawable/ic_baseline_mic_none_24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

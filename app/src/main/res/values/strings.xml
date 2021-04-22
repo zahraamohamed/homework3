@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">hm3week8</string>
+    <string name="my_chat">My Chat</string>
+    <string name="text_message1">Hi leo,whats up?? \n i need anew logo for groub.</string>
+    <string name="text_message2">simple minimal and beauti...</string>
+    <string name="_22_30">22:30</string>
+    <string name="_22_31">22:31</string>
+    <string name="text_message_receive1">ok,i will start next week.\n send me document today</string>
+    <string name="_22_32">22:32</string>
+    <string name="_22_33">22:33</string>
+    <string name="text_message_send3">oh,thats great 😍 thank bareq .</string>
 </resources>
