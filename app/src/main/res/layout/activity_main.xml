@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
+    android:padding="@dimen/normal_padding"
 android:background="@drawable/my_background"
     >
 <!--    tool bar-->
@@ -29,9 +29,10 @@ android:background="@drawable/my_background"
 <!--//first sub linear layout-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/margin_top">
+      >
         <!--message send1-->
         <LinearLayout
             style="@style/linear_layout"
@@ -76,13 +77,14 @@ android:background="@drawable/my_background"
             />
         <LinearLayout
             style="@style/linear_layout"
-            android:layout_marginEnd="@dimen/margin_start_message"
-            android:layout_marginStart="@dimen/margin_end_message"
+            android:layout_gravity="start"
+            android:gravity="start"
             android:background="@drawable/my_message_recrive"
            >
                     <!--receive message 1-->
             <TextView
                 style="@style/message_style.receive"
+
                 android:text="@string/text_message_receive1"
                 />
 
@@ -94,6 +96,7 @@ android:background="@drawable/my_background"
             android:text="@string/_22_32"
             android:layout_gravity="start"
             />
+        <!-- message send 3-->
         <LinearLayout
             style="@style/linear_layout"
             android:background="@drawable/my_message_send">
@@ -105,32 +108,31 @@ android:background="@drawable/my_background"
             <ImageView style="@style/icon_tick" />
 
         </LinearLayout>
-        <!--end message 1-->
+        <!--end message 3-->
         <!--        time-->
         <TextView
             style="@style/time"
             android:text="@string/_22_33"
             android:layout_gravity="end"
             />
+    </LinearLayout>
           <!-- textbox -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/textbox"
-            android:layout_gravity="bottom"
-            android:gravity="bottom"
-            android:layout_marginTop="@dimen/margin_top"
-
             android:orientation="horizontal"
-            android:padding="@dimen/normal_padding">
+            android:padding="@dimen/normal_padding"
+
+            >
 
             <ImageView
                 style="@style/icons_all"
 
-                android:src="@drawable/ic_baseline_insert_emoticon_24" />
+                android:src="@drawable/gif_icon" />
 
             <View
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="3"/>
 
@@ -146,6 +148,6 @@ android:background="@drawable/my_background"
 
         </LinearLayout>
 
-    </LinearLayout>
+
 
 </LinearLayout>
